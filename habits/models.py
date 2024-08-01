@@ -22,3 +22,6 @@ class Habit(models.Model):
     class Meta:
         verbose_name = 'Привычка'
         verbose_name_plural = 'Привычки'
+
+    def __str__(self):
+        return f'I will {self.action} at {self.time} at {self.place} every {self.periodicity} days'
