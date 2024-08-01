@@ -10,6 +10,7 @@ class Habit(models.Model):
 
     place = models.CharField(max_length=50, verbose_name='Место')
     time = models.TimeField(verbose_name='Время')
+    duration = models.IntegerField(verbose_name='Время на выполнение', default=30)
     periodicity = models.SmallIntegerField(verbose_name='Периодичность')
     action = models.CharField(max_length=100, verbose_name='Действие')
 
