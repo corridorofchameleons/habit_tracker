@@ -14,7 +14,7 @@ class Habit(models.Model):
     action = models.CharField(max_length=100, verbose_name='Действие')
 
     pleasant_habit = models.BooleanField(verbose_name='Полезная привычка', default=False)
-    related_habit = models.BooleanField(verbose_name='Приятная привычка', null=True)
+    related_habit = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, verbose_name='Связанная привычка')
     reward = models.CharField(verbose_name='Вознаграждение', null=True)
 
     is_public = models.BooleanField(verbose_name='Видно всем')
