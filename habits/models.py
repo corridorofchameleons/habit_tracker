@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Habit(models.Model):
@@ -13,6 +14,7 @@ class Habit(models.Model):
     duration = models.IntegerField(verbose_name='Время на выполнение', default=30)
     periodicity = models.SmallIntegerField(verbose_name='Периодичность')
     action = models.CharField(max_length=100, verbose_name='Действие')
+    started_at = models.DateField(default=timezone.now)
 
     pleasant_habit = models.BooleanField(verbose_name='Полезная привычка', default=False)
     related_habit = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, verbose_name='Связанная привычка')

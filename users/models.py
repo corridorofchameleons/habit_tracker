@@ -5,6 +5,7 @@ from django.db import models
 class User(AbstractUser):
     username = None
     email = models.EmailField(max_length=40, unique=True, verbose_name='Email')
+    telegram_id = models.CharField(max_length=200, verbose_name='телеграм', null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
