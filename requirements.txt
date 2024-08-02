@@ -9,3 +9,4 @@ celery==5.4.0
 django-celery-beat==2.6.0
 redis==5.0.8
 coverage==7.6.0
+setuptools==72.1.0
