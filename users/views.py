@@ -5,6 +5,9 @@ from users.serializers import UserCreateSerializer
 
 
 class UserCreateAPIView(generics.CreateAPIView):
+    '''
+    Создание нового пользователя
+    '''
     serializer_class = UserCreateSerializer
     permission_classes = AllowAny,
 

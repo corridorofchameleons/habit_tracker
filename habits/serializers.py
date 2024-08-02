@@ -6,6 +6,9 @@ from habits.validators import validate_duration, validate_periodicity
 
 
 class HabitSerializer(serializers.ModelSerializer):
+    '''
+    Сериалайзер привычки
+    '''
     duration = serializers.IntegerField(validators=[validate_duration])
     periodicity = serializers.IntegerField(validators=[validate_periodicity])
 
